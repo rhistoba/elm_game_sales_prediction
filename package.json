@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "json-server": "^0.14.0",
     "semantic-ui-css": "^2.3.3"
   }
 }
