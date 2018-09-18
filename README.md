@@ -31,13 +31,7 @@ yarn install
 
 気の利いたゲーム売上予測のAPIがない場合、適当にランダムの売上を出力するjson-serverを使う。
 
-環境変数の設定が必要なので、.envファイルをプロジェクトのルートに作成して、ファイルに以下の1行を追加。
-
-```
-ELM_APP_GSP_REQUEST_URL="http://localhost:4000/predict"
-```
-
-json-serverを立ち上げる。
+環境変数の設定が必要なので、.env.sampleを.envにファイル名を変更したのち、json-serverを立ち上げる。
 
 ```
 node fake_api.js
@@ -49,6 +43,6 @@ elmのアプリを起動します。
 elm-app start
 ```
 
-http://localhost:3000で起動したアプリにアクセスできます。
+http://localhost:3000 で起動したアプリにアクセスできます。
 
-上記の環境変数がないとランタイムエラーになるかもしれません。
+環境変数がないとランタイムエラーになるかもしれません。
