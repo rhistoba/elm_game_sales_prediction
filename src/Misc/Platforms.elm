@@ -1,0 +1,37 @@
+module Misc.Platforms exposing (..)
+
+
+platforms : List String
+platforms =
+    [ "NES"
+    , "SNES"
+    , "N64"
+    , "GC"
+    , "Wii"
+    , "WiiU"
+    , "GB"
+    , "GBA"
+    , "DS"
+    , "3DS"
+    , "PS"
+    , "PS2"
+    , "PS3"
+    , "PS4"
+    , "PSP"
+    , "PSV"
+    , "X360"
+    , "XB"
+    , "XOne"
+    , "PC"
+    , "2600"
+    , "3DO"
+    , "DC"
+    , "GEN"
+    , "GG"
+    , "NG"
+    , "PCFX"
+    , "SAT"
+    , "SCD"
+    , "TG16"
+    , "WS"
+    ]
