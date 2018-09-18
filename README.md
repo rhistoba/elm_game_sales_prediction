@@ -29,10 +29,10 @@ yarn install
 
 # Webアプリを動かす
 
-気の利いたゲーム売上予測のAPIがない場合、適当にランダムの売上を出力するjson-serverを使う。
+気の利いたゲーム売上予測のAPIがない場合、適当にランダムの売上を出力するjson-serverを使う。
 
 環境変数の設定が必要なので、.env.sampleを.envにファイル名を変更したのち、json-serverを立ち上げる。
-
+
 ```
 node fake_api.js
 ```
