@@ -33,7 +33,7 @@ view flags predictor =
                 ]
             , button [ class "ui button", type_ "submit" ] [ text "Submit" ]
             ]
-        , h2 [] [ text ("Predicted sales: " ++ predictor.pred_result.scored_label_mean ++ "(in million)") ]
+        , h2 [] [ text ("Predicted sales: " ++ predictor.predResult.scored_label_mean ++ "(in million)") ]
         ]
 
 

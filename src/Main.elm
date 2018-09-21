@@ -1,11 +1,12 @@
-module Main exposing (..)
+module Main exposing (init, main)
 
+import Browser exposing (document)
+import Flags exposing (Flags)
 import Html exposing (Html)
+import Messages exposing (Msg(..))
 import Models exposing (Model, initialModel)
 import Update exposing (update)
 import View exposing (view)
-import Flags exposing (Flags)
-import Messages exposing (Msg(..))
 
 
 init : Flags -> ( Model, Cmd Msg )
@@ -15,9 +16,9 @@ init flags =
 
 main : Program Flags Model Msg
 main =
-    Html.programWithFlags
-        { view = view
-        , init = init
+    Browser.document
+        { init = init
+        , view = view
         , update = update
         , subscriptions = always Sub.none
         }

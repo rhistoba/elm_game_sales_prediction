@@ -5,13 +5,13 @@ import Predictor.PredResult exposing (PredResult, initPredResult)
 
 
 type alias Predictor =
-    { pred_input : PredInput
-    , pred_result : PredResult
+    { predInput : PredInput
+    , predResult : PredResult
     }
 
 
 initialPredictor : Predictor
 initialPredictor =
-    { pred_input = initPredInput
-    , pred_result = initPredResult
+    { predInput = initPredInput
+    , predResult = initPredResult
     }

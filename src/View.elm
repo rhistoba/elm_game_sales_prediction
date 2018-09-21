@@ -1,12 +1,18 @@
-module View exposing (..)
+module View exposing (view)
 
-import Predictor.View
-import Models exposing (Model)
+import Browser exposing (Document)
 import Html exposing (Html)
 import Messages exposing (Msg(..))
+import Models exposing (Model)
+import Predictor.View
 
 
-view : Model -> Html Msg
+view : Model -> Document Msg
 view model =
-    Html.map PredictorMsg (Predictor.View.view model.flags model.predictor)
-    
+    let
+        predictorView =
+            Html.map PredictorMsg (Predictor.View.view model.flags model.predictor)
+    in
+    { title = "Main"
+    , body = [ predictorView ]
+    }

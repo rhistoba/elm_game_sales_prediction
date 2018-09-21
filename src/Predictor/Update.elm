@@ -10,39 +10,39 @@ update msg predictor =
     case msg of
         InputTitle title ->
             let
-                current_pred_input =
-                    predictor.pred_input
+                currentPredInput =
+                    predictor.predInput
 
-                next_pred_input =
-                    { current_pred_input | title = title }
+                nextPredInput =
+                    { currentPredInput | title = title }
             in
-                ( { predictor | pred_input = next_pred_input }, Cmd.none )
+                ( { predictor | predInput = nextPredInput }, Cmd.none )
 
         InputGenre genre ->
             let
-                current_pred_input =
-                    predictor.pred_input
+                currentPredInput =
+                    predictor.predInput
 
-                next_pred_input =
-                    { current_pred_input | genre = genre }
+                nextPredInput =
+                    { currentPredInput | genre = genre }
             in
-                ( { predictor | pred_input = next_pred_input }, Cmd.none )
+                ( { predictor | predInput = nextPredInput }, Cmd.none )
 
         InputPlatform platform ->
             let
-                current_pred_input =
-                    predictor.pred_input
+                currentPredInput =
+                    predictor.predInput
 
-                next_pred_input =
-                    { current_pred_input | platform = platform }
+                nextPredInput =
+                    { currentPredInput | platform = platform }
             in
-                ( { predictor | pred_input = next_pred_input }, Cmd.none )
+                ( { predictor | predInput = nextPredInput }, Cmd.none )
 
         SubmitPrediction flags ->
-            ( predictor, sendPredRequest flags predictor.pred_input )
+            ( predictor, sendPredRequest flags predictor.predInput )
 
-        ReceivePredResponce (Ok pred_result) ->
-            ( { predictor | pred_result = pred_result }, Cmd.none )
+        ReceivePredResponce (Ok predResult) ->
+            ( { predictor | predResult = predResult }, Cmd.none )
 
         ReceivePredResponce (Err error) ->
             ( predictor, Cmd.none )
